@@ -1,0 +1,25 @@
+name: datamaps-open-source
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/data
+      - ./backend:/app
+      - ./scripts:/scripts
+      # Папка-источник CSV монтируется как /data/csv read-only.
+      # Путь задаётся переменной CSV_SOURCE_DIR в .env.
+      - ${CSV_SOURCE_DIR:-./examples/demo_csv}:/data/csv:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      - backend

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:#1a1a1a;background:#f3f3f3;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:32px 16px;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;">
+        <!-- Header -->
+        <tr><td style="background:#FF8C00;padding:16px 32px;text-align:center;">
+          <a href="{{ app_url }}" target="_blank" style="text-decoration:none;">
+            <img src="{{ app_url }}/logo-mark-128.png" alt="DataMaps" width="40" height="40" style="display:inline-block;vertical-align:middle;border:0;" />
+            <span style="color:#fff;font-size:20px;font-weight:700;vertical-align:middle;margin-left:10px;">DataMaps</span>
+          </a>
+        </td></tr>
+        <!-- Body -->
+        <tr><td style="padding:32px;">
+          {% block content %}{% endblock %}
+        </td></tr>
+        <!-- Footer -->
+        <tr><td style="padding:16px 32px;border-top:1px solid #eee;">
+          <p style="margin:0;color:#999;font-size:12px;text-align:center;">
+            <a href="{{ app_url }}" style="color:#999;text-decoration:none;">datamaps.ru</a> — справочник организаций России
+          </p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
