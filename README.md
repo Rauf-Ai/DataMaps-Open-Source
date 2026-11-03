@@ -2,6 +2,8 @@
 
 [Инструкция на русском](README.ru.md)
 
+> **Version notice (2026-11-03):** This repository is based on an older local DataMaps codebase. The newer version is on a suspended RUVDS server and has not yet been recovered. This release is usable locally, but it does **not** represent the latest DataMaps version. We will update it only after recovering and reviewing the server files.
+
 DataMaps is a self-hosted catalog for searching organization data and exporting results to XLSX. The local edition is free: no credits, subscription, payment account, or API key is needed for CSV search and export. Source code is available under the [MIT license](LICENSE).
 
 The repository includes **only synthetic demo organizations**. Bring your own CSV files for real data. The original proprietary dataset is not included.
