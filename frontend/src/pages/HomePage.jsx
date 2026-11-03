@@ -514,6 +514,11 @@ export function HomePage() {
   return (
     <main className="dm-container">
 
+      {LOCAL_MODE && <div style={{ marginBottom: 20 }}>
+        <Alert theme="info" title="Локально и бесплатно"
+          message="Ищите организации в импортированных CSV и выгружайте XLSX без кредитов и оплаты. Для выгрузки нужен только локальный аккаунт." />
+      </div>}
+
       {/* ── AI HERO ── */}
       {!LOCAL_MODE && (loggedIn ? (
         <Card view="outlined" theme="normal" className="dm-card dm-ai-hero">
