@@ -20,9 +20,9 @@ docker compose exec backend python /scripts/import.py
 docker compose restart backend
 ```
 
-Open [http://localhost:8080](http://localhost:8080). Search the synthetic demo data immediately. To export, register a local account and log in. Email confirmation is disabled in the local setup.
+Open [http://localhost:8090](http://localhost:8090). Search the synthetic demo data immediately. To export, register a local account and log in. Email confirmation is disabled in the local setup.
 
-The backend API documentation is at [http://localhost:8080/api/docs](http://localhost:8080/api/docs). The Compose setup publishes only the frontend on `127.0.0.1:8080`.
+The backend API documentation is at [http://localhost:8090/api/docs](http://localhost:8090/api/docs). The Compose setup publishes only the frontend on `127.0.0.1:8090`. Change `DATAMAPS_PORT` and `APP_URL` together if that port is occupied.
 
 ## Use your own data
 

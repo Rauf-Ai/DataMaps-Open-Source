@@ -10,7 +10,7 @@ keywords: [локально, CSV, импорт, поиск, выгрузка, Ex
 
 Положите CSV-файлы с 38 колонками в папку, указанную как CSV_SOURCE_DIR в .env.
 Запустите `docker compose exec backend python /scripts/import.py`, затем
-`docker compose restart backend`. После этого откройте http://localhost:8080
+`docker compose restart backend`. После этого откройте http://localhost:8090
 и задайте фильтры поиска.
 
 ## Выгрузка в XLSX
